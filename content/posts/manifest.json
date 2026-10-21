@@ -1,0 +1,83 @@
+{
+  "generatedAt": "2026-10-21T07:51:24.488Z",
+  "count": 5,
+  "posts": [
+    {
+      "id": 1005,
+      "slug": "1005-ctf-sql-injection-waf",
+      "title": "CTF Web 入门：SQL 注入从零到绕过 WAF",
+      "date": "2026-10-15",
+      "tags": [
+        "CTF",
+        "Web安全"
+      ],
+      "status": "published",
+      "author": "K4",
+      "cover": "null",
+      "excerpt": "CTF 是练习 Web 安全最好的练兵场。本文用一个典型题目，完整走一遍判断注入 → 获取数据 → 绕过 WAF的流程。",
+      "file": "content/posts/1005-ctf-sql-injection-waf.md"
+    },
+    {
+      "id": 1004,
+      "slug": "1004-burp-suite-tips",
+      "title": "Burp Suite 实战技巧：提升渗透测试效率的 10 个配置",
+      "date": "2026-10-08",
+      "tags": [
+        "渗透测试",
+        "工具"
+      ],
+      "status": "published",
+      "author": "K4",
+      "cover": "null",
+      "excerpt": "Burp Suite 是渗透测试的主力工具。以下是我日常工作中最常用的配置与技巧，按使用频率排序。",
+      "file": "content/posts/1004-burp-suite-tips.md"
+    },
+    {
+      "id": 1003,
+      "slug": "1003-incident-response-mining",
+      "title": "一次应急响应实录：Linux 服务器挖矿木马处置全流程",
+      "date": "2026-09-25",
+      "tags": [
+        "应急响应",
+        "安全运维",
+        "Linux"
+      ],
+      "status": "published",
+      "author": "K4",
+      "cover": "null",
+      "excerpt": "一次真实的应急响应：客户报警 CPU 长期 100%。本文按检测 → 遏制 → 根除 → 恢复 → 复盘五步走完整记录。",
+      "file": "content/posts/1003-incident-response-mining.md"
+    },
+    {
+      "id": 1002,
+      "slug": "1002-crypto-primitives",
+      "title": "密码学笔记：对称加密、非对称加密与哈希的工程实践",
+      "date": "2026-09-03",
+      "tags": [
+        "密码学",
+        "笔记"
+      ],
+      "status": "published",
+      "author": "K4",
+      "cover": "null",
+      "excerpt": "加密不是银弹，但用错加密等于没加密。这篇笔记梳理三类基础原语，以及工程上最常见的误用。",
+      "file": "content/posts/1002-crypto-primitives.md"
+    },
+    {
+      "id": 1001,
+      "slug": "1001-web-security-owasp",
+      "title": "Web 安全入门：从 OWASP Top 10 看常见漏洞原理",
+      "date": "2026-08-12",
+      "tags": [
+        "Web安全",
+        "渗透测试",
+        "OWASP"
+      ],
+      "status": "published",
+      "author": "K4",
+      "cover": "null",
+      "excerpt": "安全的核心是理解系统为什么会被攻破。OWASP Top 10 是一份很好的入门地图，本文挑其中最常见、面试也最常问的几类漏洞，讲清楚原理与防御。",
+      "file": "content/posts/1001-web-security-owasp.md"
+    }
+  ]
+}
