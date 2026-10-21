@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
+<html lang="zh-CN" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,26 +27,32 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#/" aria-label="SecLog 首页">
-        <span class="brand-mark" aria-hidden="true">🛡️</span>
+        <span class="brand-mark" aria-hidden="true">▌</span>
         <span class="brand-name">SecLog</span>
+        <span class="brand-suffix" aria-hidden="true">_</span>
       </a>
       <nav class="nav" aria-label="主导航">
         <a href="#/" data-route="home">首页</a>
         <a href="#/about" data-route="about">关于</a>
+        <a href="https://github.com/coolerhack/seclog" target="_blank" rel="noopener" class="ext">GitHub</a>
         <button id="theme-toggle" class="icon-btn" type="button" aria-label="切换明暗主题" title="切换主题">🌓</button>
       </nav>
     </div>
     <div class="container search-bar">
+      <span class="search-prompt" aria-hidden="true">grep&gt;</span>
       <input id="search" type="search" placeholder="搜索文章标题 / 标签…" autocomplete="off" aria-label="搜索文章" />
     </div>
   </header>
 
-  <main id="app" class="container" tabindex="-1"></main>
+  <div class="layout container">
+    <aside class="sidebar" id="sidebar" aria-label="站点信息"></aside>
+    <main id="app" class="content" tabindex="-1"></main>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <span id="footer-copy"></span>
-      <span class="footer-meta">静态站点 · 文章存于仓库 · 零构建</span>
+      <span class="footer-meta">// 静态站点 · 零构建 · 黑客精神</span>
     </div>
   </footer>
 </body>

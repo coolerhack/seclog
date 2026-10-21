@@ -8,10 +8,15 @@ SB.pages.home = async function (ctx) {
   var tags = store.tags();
   var frag = ui.el('div');
 
-  var hero = ui.el('section', { class: 'hero' }, [
-    ui.el('h1', { text: SB.config.title }),
-    ui.el('p', { class: 'tagline', text: SB.config.tagline })
-  ]);
+  var hero = ui.el('section', { class: 'hero' });
+  hero.appendChild(ui.el('div', { class: 'term-line' }, [
+    ui.el('span', { class: 'prompt', text: 'visitor@seclog' }),
+    ui.el('span', { text: ':' }),
+    ui.el('span', { class: 'path', text: '~' }),
+    ui.el('span', { text: '$ whoami' })
+  ]));
+  hero.appendChild(ui.el('h1', { text: SB.config.title }));
+  hero.appendChild(ui.el('p', { class: 'tagline', text: SB.config.tagline }));
   hero.appendChild(ui.el('div', { class: 'hero-meta' }, [
     ui.el('span', { class: 'tag-pill', text: store.published().length + ' 篇文章' }),
     ui.el('span', { class: 'tag-pill', text: tags.length + ' 个标签' })
