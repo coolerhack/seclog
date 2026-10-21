@@ -1,6 +1,35 @@
 window.SB = window.SB || {};
 SB.pages = SB.pages || {};
 
+function buildToc(article) {
+  var heads = article.querySelectorAll('h2, h3');
+  if (!heads.length) return null;
+  var ul = document.createElement('ul');
+  Array.prototype.forEach.call(heads, function (h, i) {
+    if (!h.id) h.id = 'toc-' + i;
+    var a = document.createElement('a');
+    a.textContent = h.textContent;
+    a.href = '#' + h.id;
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var t = document.getElementById(h.id);
+      if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    var li = document.createElement('li');
+    if (h.tagName === 'H3') li.className = 'h3';
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+  var nav = document.createElement('nav');
+  nav.className = 'toc';
+  var title = document.createElement('div');
+  title.className = 'toc-title';
+  title.textContent = '// 目录';
+  nav.appendChild(title);
+  nav.appendChild(ul);
+  return nav;
+}
+
 SB.pages.post = async function (ctx) {
   var ui = SB.ui, store = SB.store, md = SB.md;
   var slug = ctx.params[0];
@@ -26,7 +55,16 @@ SB.pages.post = async function (ctx) {
 
   var article = ui.el('article', { class: 'prose' });
   article.innerHTML = html;
-  frag.appendChild(article);
+
+  var toc = buildToc(article);
+  if (toc) {
+    var wrap = ui.el('div', { class: 'post-layout' });
+    wrap.appendChild(article);
+    wrap.appendChild(toc);
+    frag.appendChild(wrap);
+  } else {
+    frag.appendChild(article);
+  }
 
   var all = store.published();
   var idx = all.findIndex(function (p) { return p.slug === post.slug; });

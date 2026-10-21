@@ -10,6 +10,11 @@ SB.config = {
     github: 'https://github.com/coolerhack',
     email: 'k4@seclog.dev'
   },
+  music: {
+    title: 'Drone Zone',
+    artist: 'SomaFM',
+    src: 'https://ice1.somafm.com/dronezone-128-mp3'
+  },
   postsPath: 'content/posts',
   aboutPath: 'content/about.md',
   manifestPath: 'content/posts/manifest.json'
